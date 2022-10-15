@@ -1,4 +1,4 @@
-function R = calc_moment(r,F,u)
+function R = moment(r,F,u)
     M = cross(r,F);
 
     if exist('u', 'var'),
