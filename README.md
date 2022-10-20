@@ -19,7 +19,7 @@ I have no clue what I'm doing help me aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 ## Installation
 
-These functions are run with Matlab or Octave. 
+These functions are run with [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://octave.org/index). 
 
 Simply clone this repository:
 ```
