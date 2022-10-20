@@ -18,4 +18,7 @@ function R = MinMax(pp)
         Dc = D(x0, y0)
         fc = f(x0, y0)
         fxxc = fxx(x0,y0)
+    %Ima do it
+        figure('Name','Idk if this will work at all')
+        [x, y] = meshgrid(-100:100, -100:100); mesh(x, y, f(x,y))
 end
