@@ -15,7 +15,6 @@ function R = MinMax(pp)
         [x0, y0] = solve(eqns, [x y]); crit = [x0 y0]
     %The plug
         Dc = D(x0, y0)
-        disp('Values at the critical points: ')
         fc = f(x0, y0)
         fxxc = fxx(x0,y0)
     %Ima do it
