@@ -1,5 +1,5 @@
 # gigacalc
-**READ WIKI FOR TUTORIALS ON HOW TO USE FUNCTIONS**
+## READ WIKI FOR TUTORIALS ON HOW TO USE FUNCTIONS
 
 doing our homework using an epic set of matlab/octave scripts
 
