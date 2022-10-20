@@ -1,5 +1,5 @@
 function R = MinMax(pp)
-    syms f(x,y) D(x,y) fxx(x,y)
+    syms f(x,y) D(x,y) fxx(x,y); format compact;
     assume(x, 'real'); assume(y, 'real');
     f(x,y) = pp
     % Make the Partials and display them;
@@ -19,6 +19,9 @@ function R = MinMax(pp)
         fc = f(x0, y0)
         fxxc = fxx(x0,y0)
     %Ima do it
-        figure('Name','Idk if this will work at all')
-        [x, y] = meshgrid(-100:100, -100:100); mesh(x, y, f(x,y))
+        figure('Name','Your piece of shit function')
+        h = fsurf(f, [-50 50], 'ShowContours', 'on');
+        h.AmbientStrength = .4; 
+        xlabel ('x'); ylabel ('y'); zlabel ('f(x,y)');
+        title (['$' latex(f) '$'], 'Interpreter', 'latex')
 end
