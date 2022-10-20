@@ -5,7 +5,12 @@ OBJECTIVE:
 add a bunch of function files together so that they can be used to assist in homework in the future and perhaps some extremely desperate soul in the future
 who would rather sit through this bs and try to make sense of it rather than sit down and understand what material they were looking at in the first place
 
+**READ WIKI FOR TUTORIALS ON HOW TO USE FUNCTIONS**
+
 CURRENT STATE:
-Debris has been good about making files in function form but I have been extremely lazy about it and am getting stuck on the symbolic function aspect.
-As of now I will keep using code as individual calculators to tab into but do plan on adapting the code to be able to be used as a function in the future
-for better ease of use.
+
+It is important that you can use symbolic functions (syms vars command) for specific functions to work
+It would be useful to load the symbolic variables "x y z" in your workspace before running functions so that they can work properly
+
+
+I have no clue what I'm doing help me aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
