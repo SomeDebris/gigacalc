@@ -1,0 +1,15 @@
+function r = GradientStuff(f, Ui, P)
+    syms x y z; format compact;
+    fx = diff(f, x)
+    fy = diff(f, y)
+    fz = diff(f,z)
+    p =  P(1);%P(x)
+    q =  P(2);%P(y)
+    r =  P(3);%P(z)
+    numFx = subs(fx, [x, y, z], [p, q, r])
+    numFy = subs(fy, [x, y, z], [p, q, r])
+    numFz = subs(fz, [x, y, z], [p, q, r])
+    rate = norm([numFx numFy numFz])
+    Uf = Ui./norm(Ui)
+    DIRu = dot([numFx numFy numFz], Uf)
+end
