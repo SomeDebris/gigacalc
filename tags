@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/magnus/src/gigacalc/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Ax	homework-scripts/method-of-joints.m	/^Ax  = p1$/;"	v
+Ay	homework-scripts/method-of-joints.m	/^Ay  = p2 - Cy$/;"	v
+Cy	homework-scripts/method-of-joints.m	/^Cy  = (a * (p1 + p2)) \/ norm( cross([2*a;-a;0],[0;1;0]) )$/;"	v
+Dc	MinMax.m	/^        Dc = D(x0, y0)$/;"	v
+Ey	homework-scripts/6.8.m	/^Ey  = (9*P*(12\/13)) \/ 3$/;"	v
+Fab	homework-scripts/6.8.m	/^Fab = -(Fac*(3\/5) - P*(5\/13))$/;"	v
+Fab	homework-scripts/method-of-joints.m	/^Fab = -Ax$/;"	v
+Fac	homework-scripts/6.8.m	/^Fac = -(P*12\/13) \/ (4\/5)$/;"	v
+Fbc	homework-scripts/method-of-joints.m	/^Fbc = (p2 - Fbd*sind(45))\/sind(45)$/;"	v
+Fbd	homework-scripts/6.8.m	/^Fbd = Fab$/;"	v
+Fbd	homework-scripts/method-of-joints.m	/^Fbd = (p2 - Fab)\/(2*sind(45))$/;"	v
+Fce	homework-scripts/6.8.m	/^Fce = (3\/5) * (Fac - Fdc)$/;"	v
+Fdc	homework-scripts/6.8.m	/^Fdc = -Fac$/;"	v
+Fde	homework-scripts/6.8.m	/^Fde = -(Fdc)*(4\/5)$/;"	v
+Fdf	homework-scripts/6.8.m	/^Fdf = Fbd + Fdc*(3\/5)$/;"	v
+Fef	homework-scripts/6.8.m	/^Fef = $/;"	v
+Fx	homework-scripts/6.8.m	/^Fx  = P * (5\/13)$/;"	v
+Fy	homework-scripts/6.8.m	/^Fy  = (P * 12\/13) - Ey$/;"	v
+GradientStuff	GradientStuff.m	/^function r = GradientStuff(f, P, Ui)$/;"	f
+Installation	README.md	/^## Installation$/;"	s	chapter:gigacalc
+M	moment.m	/^    M = cross(r,F);$/;"	v
+MAGdirU	GradientStuff.m	/^            MAGdirU = dot([numFx numFy numFz], Uf)$/;"	v
+MinMax	MinMax.m	/^function R = MinMax(pp)$/;"	f
+P	homework-scripts/6.8.m	/^P   = 340$/;"	v
+R	moment.m	/^        R = M;$/;"	v
+R	moment.m	/^        R = dot(u,M);$/;"	v
+READ WIKI FOR TUTORIALS ON HOW TO USE FUNCTIONS	README.md	/^## READ WIKI FOR TUTORIALS ON HOW TO USE FUNCTIONS$/;"	s	chapter:gigacalc
+Uf	GradientStuff.m	/^            Uf = Ui.\/norm(Ui)$/;"	v
+a	homework-scripts/method-of-joints.m	/^a   = 2.6$/;"	v
+eqns	MinMax.m	/^        eqns = [fx == 0 , fy ==0];$/;"	v
+fc	MinMax.m	/^        fc = f(x0, y0)$/;"	v
+fx	GradientStuff.m	/^    fx = diff(f, x)$/;"	v
+fx	MinMax.m	/^        fx = diff(f(x,y), x)$/;"	v
+fxxc	MinMax.m	/^        fxxc = fxx(x0,y0)$/;"	v
+fxy	MinMax.m	/^        fxy = diff(fx, y)$/;"	v
+fy	GradientStuff.m	/^    fy = diff(f, y)$/;"	v
+fy	MinMax.m	/^        fy = diff(f(x,y), y)$/;"	v
+fyy	MinMax.m	/^        fyy = diff(fy, y)$/;"	v
+fz	GradientStuff.m	/^    fz = diff(f,z)$/;"	v
+gigacalc	README.md	/^# gigacalc$/;"	c
+moment	moment.m	/^function R = moment(r,F,u)$/;"	f
+numFx	GradientStuff.m	/^        numFx = subs(fx, [x, y, z], [p, q, r])$/;"	v
+numFy	GradientStuff.m	/^        numFy = subs(fy, [x, y, z], [p, q, r])$/;"	v
+numFz	GradientStuff.m	/^        numFz = subs(fz, [x, y, z], [p, q, r])$/;"	v
+p	GradientStuff.m	/^        p =  P(1);%P(x)$/;"	v
+p1	homework-scripts/method-of-joints.m	/^p1  = 196$/;"	v
+p2	homework-scripts/method-of-joints.m	/^p2  = 410$/;"	v
+q	GradientStuff.m	/^        q =  P(2);%P(y)$/;"	v
+r	GradientStuff.m	/^        r =  P(3);%P(z)$/;"	v
+rate	GradientStuff.m	/^        rate = norm([numFx numFy numFz])$/;"	v
