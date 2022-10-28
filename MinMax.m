@@ -24,3 +24,5 @@ function R = MinMax(pp)
         xlabel ('x'); ylabel ('y'); zlabel ('f(x,y)');
         title (['$' latex(f) '$'], 'Interpreter', 'latex')
 end
+
+% lol
