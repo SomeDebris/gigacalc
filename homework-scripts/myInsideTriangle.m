@@ -1,31 +1,33 @@
+% I use long variable names because it explains
+% without comments exactly what the code is doing.
+
 function [S] = myInsideTriangle(x,y)
-    P1 = [0,0];
-    P2 = [1,0];
-    P3 = [0,1];
-
     is_inside_triangle = false;
+    is_inside_or_on_border = true;
     is_on_border = false;
-    is_out_of_bounds = false;
-    is_outside_triangle = false;
+    is_outside_triangle = true;
 
-    if (x > 1 || x < 0)
-        is_out_of_bounds = true;
-    elseif (y > 1 || y < 0)
-        is_out_of_bounds = true;
+    if (x + y < 1 && x > 0 && y > 0)
+        is_inside_triangle = true;
     end
 
-    if is_out_of_bounds
+    if (x + y <= 1 && x >= 0 && y >= 0)
+        is_inside_or_on_border = true;
+    end
 
-
-    if (y + x == 1 || x == 0 || y == 0)
+    if (!is_inside_triangle && is_inside_or_on_border)
         is_on_border = true;
     end
 
-    if is_on_border
-        S = 'border'
-        return
+    if (!is_on_border && !is_inside_triangle)
+        is_outside_triangle = true;
     end
 
-    if (y + x < 1)
-        is_inside_triangle = true;
+    if is_on_border
+        S = 'border';
+    elseif is_inside_triangle
+        S = 'inside';
+    else
+        S = 'outside';
     end
+end
