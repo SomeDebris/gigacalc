@@ -3,9 +3,9 @@
 
 function [S] = myInsideTriangle(x,y)
     is_inside_triangle = false;
-    is_inside_or_on_border = true;
+    is_inside_or_on_border = false;
     is_on_border = false;
-    is_outside_triangle = true;
+    is_outside_triangle = false;
 
     if (x + y < 1 && x > 0 && y > 0)
         is_inside_triangle = true;
