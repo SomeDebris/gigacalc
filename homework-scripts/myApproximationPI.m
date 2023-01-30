@@ -9,7 +9,9 @@ function [mypi] = myApproximationPI(N)
 
     k = 0:N;
 
-    summation_result = (factorial(4 * k) * (1103 + 26390 * k)) / ((factorial(k) ^ 4) * 396 ^ (4 * k))
+    summation_target = (factorial(4 * k) * (1103 + 26390 * k)) / ((factorial(k) ^ 4) * 396 ^ (4 * k))
+
+    summation_result = sum(summation_target);
 
     mypi = 1 / (summation_multiplier * summation_result);
 end
