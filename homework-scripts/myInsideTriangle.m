@@ -15,11 +15,11 @@ function [S] = myInsideTriangle(x,y)
         is_inside_or_on_border = true;
     end
 
-    if (!is_inside_triangle && is_inside_or_on_border)
+    if (~is_inside_triangle && is_inside_or_on_border)
         is_on_border = true;
     end
 
-    if (!is_on_border && !is_inside_triangle)
+    if (~is_on_border && ~is_inside_triangle)
         is_outside_triangle = true;
     end
 
