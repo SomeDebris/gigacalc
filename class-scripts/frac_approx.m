@@ -4,7 +4,7 @@ function [returnme] = frac_approx(target,tolerance)
 
     v = numerator / denominator;
 
-    while (~within_tolerance(v,pi,tolerance))
+    while (~within_tolerance(target,v,tolerance))
         if (v == target)
             break;
         elseif (v > target)
@@ -13,7 +13,10 @@ function [returnme] = frac_approx(target,tolerance)
             numerator += 1;
         end
 
-        v = numerator / denominator;
+        numerator
+        denominator
+
+        v = numerator / denominator
     end
 
     f_numerator = numerator;
