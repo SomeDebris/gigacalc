@@ -13,10 +13,7 @@ function [returnme] = frac_approx(target,tolerance)
             numerator += 1;
         end
 
-        numerator
-        denominator
-
-        v = numerator / denominator
+        v = numerator / denominator;
     end
 
     f_numerator = numerator;

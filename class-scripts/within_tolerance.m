@@ -1,6 +1,6 @@
 function [is_within_tolerance] = within_tolerance(theoretical_value, actual_value, tolerance)
-    upper_bound = theoretical_value + tolerance
-    lower_bound = theoretical_value - tolerance
+    upper_bound = theoretical_value + tolerance;
+    lower_bound = theoretical_value - tolerance;
 
     is_within_tolerance = false;
 
