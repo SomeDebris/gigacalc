@@ -19,6 +19,6 @@ function [returnme] = frac_approx(target,tolerance)
     f_numerator = numerator;
     f_denominator = denominator;
 
-    returnme = [f_numerator, f_denominator]
+    returnme = [f_numerator, f_denominator];
 end
 
