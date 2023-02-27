@@ -6,7 +6,7 @@ function [years] = mySavingPlan(P0, i, goal)
     Pn = P0;
 
     while (Pn <= goal)
-        y += 1;
+        y = y + 1;
 
         Pn = (1 + i) * Pn - 1;
     end
