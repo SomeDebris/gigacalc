@@ -20,5 +20,5 @@ v_theta = v * sind( phi + theta );
 r_dot = v_r
 theta_dot = v_theta / r
 
-r_dot2 = -a_r + ( r * theta_dot )
+r_dot2 = a_r + ( r * theta_dot^2 )
 theta_dot2 = ( a_theta - ( 2 * r_dot * theta_dot ) ) / r
