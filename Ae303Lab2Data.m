@@ -1,42 +1,65 @@
 % function [Lab2AvgAirData,Lab2TmpData,InletPressAll,AmbPressPsi,AmbTmp] = Ae303Lab2Data
 
+datasheet_path = "C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx"; 
+
+target_ranges = [ 
+    'b7:e41'
+    'f7:i41'
+    'j7:m41' 
+];
+
+for group=1:3 
+    for sheet=1:3
+        range = readmatrix( datasheet_path, 'Sheet', sheet + 1, 'Range', target_ranges(sheet) );
+        
+        GData(:,:,sheet,group) = range;
+    end
+end
+
 G1Data = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','b7:e41');
 
-G1AmbTmp = 73.8 ; %Group 1, Pressure in inHg, for all is 29.59, Tmp in F
-G1Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','b7:e41');
-G1Tmp(1) = 73.6; %G1TmpD0
-G1Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','f7:i41');
-G1Tmp(2) = 73.8; %G1TmpD2
-G1Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','j7:m41');
-G1Tmp(3) = 76.8; %G1TmpD7
+
+
+
+GTmp(1,1) = 73.6; %G1TmpD0
+GTmp(2,1) = 73.8; %G1TmpD2
+GTmp(3,1) = 76.8; %G1TmpD7
+
+GTmp(1,2) = 74.0; %G2TmpD0
+GTmp(2,2) = 74.1; %G2TmpD2
+GTmp(3,2) = 77.1; %G2TmpD7
+
+GTmp(1,3) = 74.3; %G3TmpD0
+GTmp(2,3) = 74.3; %G3TmpD2
+GTmp(3,3) = 78.2; %G3TmpD7
 
 G1Data(:,:,1) = G1Data0in;
 G1Data(:,:,2) = G1Data2in;
 G1Data(:,:,3) = G1Data7in;
 
-G2AmbTmp = 74.4 ; %Group 2
-G2Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','b7:e41');
-G2Tmp(1) = 74; %G2TmpD0
-G2Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','f7:i41');
-G2Tmp(2) = 74.1; %G2TmpD2
-G2Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','j7:m41');
-G2Tmp(3) = 77.1; %G2TmpD7
-
 G2Data(:,:,1) = G2Data0in;
 G2Data(:,:,2) = G2Data2in;
 G2Data(:,:,3) = G2Data7in;
 
-G3AmbTmp = 74.6 ;%Group 3
-G3Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','b7:e41');
-G3Tmp(1) = 74.3; %G3TmpD0
-G3Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','f7:i41');
-G3Tmp(2) = 74.3; %G3TmpD2
-G3Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','j7:m41');
-G3Tmp(3) = 78.2; %G3TmpD7
-
 G3Data(:,:,1) = G3Data0in;
 G3Data(:,:,2) = G3Data2in;
 G3Data(:,:,3) = G3Data7in;
+
+G1Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','b7:e41');
+G1Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','f7:i41');
+G1Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',2,'Range','j7:m41');
+
+G2Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','b7:e41');
+G2Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','f7:i41');
+G2Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',3,'Range','j7:m41');
+
+G3Data0in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','b7:e41');
+G3Data2in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','f7:i41');
+G3Data7in = readmatrix("C:\Users\mgaes\OneDrive\Documents\Ae303Lab\Ae303Lab2Data.xlsx",'Sheet',4,'Range','j7:m41');
+
+G1AmbTmp = 73.8 ; %Group 1, Pressure in inHg, for all is 29.59, Tmp in F
+G2AmbTmp = 74.4 ; %Group 2
+G3AmbTmp = 74.6 ;%Group 3
 
 %Airspeed data in 37x4x3x3 4D Matrix, Sensor,Sample,Group,WaterHeight
 Lab2AirDataS(:,:,:,1) = G1Data;
