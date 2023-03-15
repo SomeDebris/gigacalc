@@ -19,5 +19,6 @@ F_net = R + T + wt;
 a_net = F_net ./ m;
 
 a_n = g * sind(theta)
+norm(a_net)
 
-v^2 / a_n
+% v^2 / a_n
