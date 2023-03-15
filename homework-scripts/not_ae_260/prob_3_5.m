@@ -12,6 +12,6 @@ F_elevator_on_woman_total = F_elevator_on_woman_accel + wt;
 
 R = F_elevator_on_woman_total
 
-wt_box = m_w * g;
-F_woman_on_box_accel = m_w * a;
+wt_box = m_p * g;
+F_woman_on_box_accel = m_p * a;
 L = F_woman_on_box_accel + wt_box
