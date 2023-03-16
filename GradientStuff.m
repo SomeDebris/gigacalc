@@ -3,7 +3,7 @@ function r = GradientStuff(f, P, Ui)
     fx = diff(f, x)
     fy = diff(f, y)
     fz = diff(f,z)
-    if exist('P', 'var'),
+    if exist('P', 'var')
         p =  P(1);%P(x)
         q =  P(2);%P(y)
         r =  P(3);%P(z)
