@@ -18,6 +18,8 @@ wt = m * g_vec;
 F_net = R + T + wt;
 a_net = F_net ./ m;
 
+cool=t - r - m*g*cosd(theta)
+
 a_n = g * sind(theta)
 norm(a_net)
 
