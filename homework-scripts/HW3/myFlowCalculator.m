@@ -20,6 +20,6 @@ function [f] = myFlowCalculator(S,d)
         d(5)
         ];
 
-    f = (eqs\b)';
+    f = (b*pinv(eqs))';
 end
 
