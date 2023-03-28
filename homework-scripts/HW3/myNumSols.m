@@ -3,6 +3,12 @@ function [N,x] = myNumSols(A,b)
         N = Inf;
         x = pinv(A) * b;
     else
-        N = 0;
+        N = 1;
+
+        x = A\b;
+
+        if (size(x) == 0)
+            N = 0;
+        end
     end
 end
