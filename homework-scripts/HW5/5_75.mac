@@ -1,0 +1,18 @@
+norm(x) := sqrt(x . x)$
+
+v_a: 2.8 * [cos(30*(%pi / 180)), sin(30*(%pi / 180))];
+v_ang: 12;
+box_dims: [0.160,0.12];
+
+r: box_dims / 2;
+
+v_tan: r * v_ang;
+
+v_tan2: [v_tan[2], v_tan[1]];
+
+v: v_a - v_tan2;
+
+v[1], numer;
+
+v_b: v - v_tan2;
+norm(v_b), numer;
