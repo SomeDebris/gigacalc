@@ -2,7 +2,7 @@
 
 function [dy, X] = myNumDiff(f, a, b, n, option)
     x_space = linspace(a,b,n);
-    f_space = f_space;
+    f_space = f(x_space);
     
     switch (option)
         case 'forward'
@@ -15,7 +15,7 @@ function [dy, X] = myNumDiff(f, a, b, n, option)
             X = x_space( 2:(end) );
         case 'central'
 
-            if (length(f_space) - 2 > 0)
+            if (length(f_space) - 2 < 0)
                 print('Can''t compute center derivative! length too small.');
                 return;
             end
