@@ -1,4 +1,4 @@
-function [y] = myChevyshebPoly1(n,x)
+function [y] = myChebyshevPoly1(n,x)
   y = [];
   for i = 1:length(x)
     if (n == 0)
@@ -6,7 +6,7 @@ function [y] = myChevyshebPoly1(n,x)
     elseif (n == 1)
       y(end+1) = x(i);
     else
-      y(end+1) = (2 * x(i) * myChevyshebPoly1(n - 1, x(i))) - myChevyshebPoly1(n - 2, x(i));
+      y(end+1) = (2 * x(i) * myChebyshevPoly1(n - 1, x(i))) - myChebyshevPoly1(n - 2, x(i));
     end
   end
 end
