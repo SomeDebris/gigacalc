@@ -6,7 +6,7 @@ function [y] = myChebyshevPoly2(n,x)
     elseif (n == 1)
       y(end+1) = 2 * x(i);
     else
-      y(end+1) = (2 * x(i) * myChebyshevPoly1(n - 1, x(i))) - myChebyshevPoly1(n - 2, x(i));
+      y(end+1) = (2 * x(i) * myChebyshevPoly2(n - 1, x(i))) - myChebyshevPoly2(n - 2, x(i));
     end
   end
 end
