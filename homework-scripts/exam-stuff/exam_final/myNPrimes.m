@@ -3,7 +3,7 @@ function [primes] = myNPrimes(N)
     current_number = 0;
 
     while length(primes) < N
-        current_number++;
+        current_number = current_number + 1;
         
         if (current_number == 1)
             continue
