@@ -10,8 +10,8 @@ function [response] = myCollisionChecking(x,y)
     ];
 
     if (sum(checks) > 0)
-        response = 'normal'
+        response = 'normal';
     else
-        response = 'alarm!'
+        response = 'alarm!';
     end
 end
